@@ -6,19 +6,19 @@
       "value": "contoso"
     },
     "platformManagementGroup": {
-      "value": "contoso-platform"
+      "value": "platform"
     },
     "IdentityManagementGroup": {
-      "value": "contoso-identity"
+      "value": "identity"
     },
     "managementManagementGroup": {
-      "value": "contoso-management"
+      "value": "management"
     },
     "connectivityManagementGroup": {
-      "value": "contoso-connectivity"
+      "value": "connectivity"
     },
     "LandingZoneManagementGroup": {
-      "value": "contoso-landingzones"
+      "value": "landingzones"
     },
     "enableAMBAConnectivity": {
       "value": "Yes"
