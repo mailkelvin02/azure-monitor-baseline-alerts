@@ -75,13 +75,13 @@
       "value": "id-amba-prod-001"
     },
     "managementSubscriptionId": {
-      "value": "00000000-0000-0000-0000-000000000000"
+      "value": "40dd9578-4f71-4966-bb13-438775960067"
     },
     "ALZMonitorResourceGroupName": {
-      "value": "rg-amba-monitoring-001"
+      "value": "rg-amba-monitoring-002"
     },
     "ALZMonitorResourceGroupLocation": {
-      "value": "eastus"
+      "value": "uksouth"
     },
     "ALZMonitorResourceGroupTags": {
       "value": {
