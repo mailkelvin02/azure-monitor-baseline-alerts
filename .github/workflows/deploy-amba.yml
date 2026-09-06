@@ -16,9 +16,10 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Deploy AMBA Policies
+      - name: Validate AMBA
         run: |
-          az deployment sub create \
+          az deployment mg validate \
+            --management-group-id e81cb2c8-04d7-4cb1-84d3-f8ccf70961f6 \
             --location uksouth \
-            --template-file patterns/alz/alzArm.json \
+            --template-uri https://raw.githubusercontent.com/Azure/azure-monitor-baseline-alerts/main/patterns/alz/alzArm.json \
             --parameters @patterns/alz/alzArm.param.json
