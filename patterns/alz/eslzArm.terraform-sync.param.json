@@ -3,22 +3,22 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "enterpriseScaleCompanyPrefix": {
-      "value": "defaults"
+      "value": ""
     },
     "platformManagementGroup": {
-      "value": "defaults-platform"
+      "value": "platform"
     },
     "IdentityManagementGroup": {
-      "value": "defaults-identity"
+      "value": "identity"
     },
     "managementManagementGroup": {
-      "value": "defaults-management"
+      "value": "management"
     },
     "connectivityManagementGroup": {
-      "value": "defaults-connectivity"
+      "value": "connectivity"
     },
     "LandingZoneManagementGroup": {
-      "value": "defaults-landingzones"
+      "value": "landingzones"
     },
     "enableAMBAConnectivity": {
       "value": "Yes"
