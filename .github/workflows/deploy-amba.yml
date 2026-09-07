@@ -26,22 +26,21 @@ jobs:
 
       - name: Show Service Principal
         run: |
-          az ad sp show \
-          --id $(az account show --query user.name -o tsv)
+          az ad sp show --id $(az account show --query user.name -o tsv)
 
-          - name: Show GitHub Service Principal
-            run: |
-            az account show
-            az ad signed-in-user show || true
-            az ad sp show --id $(az account show --query user.name -o tsv)
+      - name: Show GitHub Service Principal
+        run: |
+          az account show
+          az ad signed-in-user show || true
+          az ad sp show --id $(az account show --query user.name -o tsv)
 
       - name: Validate AMBA
         run: |
-         echo "Parameter file:"
-         cat patterns/alz/alzArm.param.json
-         az deployment mg validate \
-         --management-group-id 557036d3-e691-43dc-822d-270ab850a823 \
-         --location uksouth \
-         --template-uri https://raw.githubusercontent.com/Azure/azure-monitor-baseline-alerts/main/patterns/alz/alzArm.json \
-         --parameters @patterns/alz/alzArm.param.json \
-         --debug
+          echo "Parameter file:"
+          cat patterns/alz/alzArm.param.json
+          az deployment mg validate \
+            --management-group-id 557036d3-e691-43dc-822d-270ab850a823 \
+            --location uksouth \
+            --template-uri https://raw.githubusercontent.com/Azure/azure-monitor-baseline-alerts/main/patterns/alz/alzArm.json \
+            --parameters @patterns/alz/alzArm.param.json \
+            --debug
