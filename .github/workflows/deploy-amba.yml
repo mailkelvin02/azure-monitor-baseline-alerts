@@ -27,7 +27,7 @@ jobs:
       - name: Validate AMBA
         run: |
           az deployment mg validate \
-            --management-group-id e81cb2c8-04d7-4cb1-84d3-f8ccf70961f6 \
+            --management-group-id 557036d3-e691-43dc-822d-270ab850a823 \
             --location uksouth \
             --template-uri https://raw.githubusercontent.com/Azure/azure-monitor-baseline-alerts/main/patterns/alz/alzArm.json \
             --parameters @patterns/alz/alzArm.param.json
