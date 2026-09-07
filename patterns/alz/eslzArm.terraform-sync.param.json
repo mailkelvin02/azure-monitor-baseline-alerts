@@ -69,7 +69,7 @@
       "value": "Yes"
     },
     "bringYourOwnUserAssignedManagedIdentityResourceId": {
-      "value": ""
+      "value": "/subscriptions/40dd9578-4f71-4966-bb13-438775960067/resourcegroups/sdwan-mgmt/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id-ama-prod-uksouth-001"
     },
     "userAssignedManagedIdentityName": {
       "value": "id-ama-prod-uksouth-001"
