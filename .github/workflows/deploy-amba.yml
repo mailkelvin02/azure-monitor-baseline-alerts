@@ -24,6 +24,17 @@ jobs:
         run: |
           az account management-group list -o table
 
+      - name: Show Service Principal
+        run: |
+          az ad sp show \
+          --id $(az account show --query user.name -o tsv)
+
+          - name: Show GitHub Service Principal
+            run: |
+            az account show
+            az ad signed-in-user show || true
+            az ad sp show --id $(az account show --query user.name -o tsv)
+
       - name: Validate AMBA
         run: |
          echo "Parameter file:"
