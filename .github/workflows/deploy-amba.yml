@@ -2,14 +2,22 @@ name: Deploy AMBA
 
 on:
   workflow_dispatch:
+    inputs:
+      amba_ref:
+        description: 'AMBA repo tag/branch to deploy from'
+        required: true
+        default: 'main'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout AMBA Repository
         uses: actions/checkout@v4
+        with:
+          repository: Azure/azure-monitor-baseline-alerts
+          ref: ${{ github.event.inputs.amba_ref }}
 
       - name: Azure Login
         uses: azure/login@v2
@@ -36,12 +44,12 @@ jobs:
 
       - name: Deploy AMBA
         run: |
+          echo "Deploying from ref: ${{ github.event.inputs.amba_ref }}"
           echo "Parameter file:"
           cat patterns/alz/alzArm.param.json
           az deployment mg create \
             --management-group-id 557036d3-e691-43dc-822d-270ab850a823 \
             --location uksouth \
-            --template-uri https://raw.githubusercontent.com/Azure/azure-monitor-baseline-alerts/main/patterns/alz/alzArm.json \
+            --template-file patterns/alz/alzArm.json \
             --parameters @patterns/alz/alzArm.param.json \
-            --validation-level ProviderNoRbac \
             --debug
