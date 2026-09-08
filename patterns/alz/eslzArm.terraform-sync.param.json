@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "enterpriseScaleCompanyPrefix": {
-      "value": "CRIAGS SANDBOX"
+      "value": "557036d3-e691-43dc-822d-270ab850a823"
     },
     "platformManagementGroup": {
       "value": "Platform"
